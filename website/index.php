@@ -30,7 +30,7 @@
             <div class="card-header text-center">
                 HALAMAN LOGIN
             </div>
-            <form action="ceklogin.php" method="post">
+            <form action="ADMIN/ceklogin.php" method="post">
                 <div class="card-body">
                     <label for="username" class="form-label">Username</label>
                     <div class="input-group mb-3">

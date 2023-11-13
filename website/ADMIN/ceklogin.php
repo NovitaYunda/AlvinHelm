@@ -5,7 +5,7 @@ if(isset($_POST['btnLogin'])){
     if($username=="admin"){ 
         if($password=="admin"){
             //login valid
-            header('location:index.php');
+            header('location:percobaan.php');
         }else{
             //password salah;
             header('location:login.php?pesan=Password Salah');
