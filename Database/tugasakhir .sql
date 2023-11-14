@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 14 Nov 2023 pada 03.53
--- Versi server: 10.4.27-MariaDB
--- Versi PHP: 8.2.0
+-- Generation Time: Nov 14, 2023 at 08:51 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,16 +24,16 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `categori`
+-- Table structure for table `categori`
 --
 
 CREATE TABLE `categori` (
   `categori_id` int(11) NOT NULL,
   `nama_categori` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `categori`
+-- Dumping data for table `categori`
 --
 
 INSERT INTO `categori` (`categori_id`, `nama_categori`) VALUES
@@ -51,7 +51,7 @@ INSERT INTO `categori` (`categori_id`, `nama_categori`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `ekspedisi`
+-- Table structure for table `ekspedisi`
 --
 
 CREATE TABLE `ekspedisi` (
@@ -60,10 +60,10 @@ CREATE TABLE `ekspedisi` (
   `ekspedisi_id` int(11) NOT NULL,
   `Tujuan` varchar(225) NOT NULL,
   `Berat(gram)` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `ekspedisi`
+-- Dumping data for table `ekspedisi`
 --
 
 INSERT INTO `ekspedisi` (`ongkos_kirim`, `nama_ekspedisi`, `ekspedisi_id`, `Tujuan`, `Berat(gram)`) VALUES
@@ -73,37 +73,29 @@ INSERT INTO `ekspedisi` (`ongkos_kirim`, `nama_ekspedisi`, `ekspedisi_id`, `Tuju
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `keranjang`
+-- Table structure for table `keranjang`
 --
 
 CREATE TABLE `keranjang` (
   `keranjang_id` int(11) NOT NULL,
   `subtotal` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `produk_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data untuk tabel `keranjang`
---
-
-INSERT INTO `keranjang` (`keranjang_id`, `subtotal`, `user_id`, `produk_id`) VALUES
-(1, 81000, 2, 18),
-(2, 395000, 3, 20);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `level`
+-- Table structure for table `level`
 --
 
 CREATE TABLE `level` (
   `nama_level` varchar(255) NOT NULL,
   `level_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `level`
+-- Dumping data for table `level`
 --
 
 INSERT INTO `level` (`nama_level`, `level_id`) VALUES
@@ -114,16 +106,16 @@ INSERT INTO `level` (`nama_level`, `level_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `merk`
+-- Table structure for table `merk`
 --
 
 CREATE TABLE `merk` (
   `merk_id` int(11) NOT NULL,
   `nama_merk` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `merk`
+-- Dumping data for table `merk`
 --
 
 INSERT INTO `merk` (`merk_id`, `nama_merk`) VALUES
@@ -154,7 +146,7 @@ INSERT INTO `merk` (`merk_id`, `nama_merk`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `produk`
+-- Table structure for table `produk`
 --
 
 CREATE TABLE `produk` (
@@ -166,10 +158,10 @@ CREATE TABLE `produk` (
   `categori_id` int(11) NOT NULL,
   `merk_id` int(11) NOT NULL,
   `supplier_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `produk`
+-- Dumping data for table `produk`
 --
 
 INSERT INTO `produk` (`produk_id`, `nama_produk`, `deskripsi_produk`, `harga_produk`, `stok_produk`, `categori_id`, `merk_id`, `supplier_id`) VALUES
@@ -200,7 +192,7 @@ INSERT INTO `produk` (`produk_id`, `nama_produk`, `deskripsi_produk`, `harga_pro
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `review`
+-- Table structure for table `review`
 --
 
 CREATE TABLE `review` (
@@ -210,20 +202,12 @@ CREATE TABLE `review` (
   `review_id` int(11) NOT NULL,
   `produk_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data untuk tabel `review`
---
-
-INSERT INTO `review` (`peringkat`, `komentar`, `tanggal_ulasan`, `review_id`, `produk_id`, `user_id`) VALUES
-('5', 'Thank you kak, barangnya sudah sampai, packing rapih, bubble wrap nya banyak.', '2023-11-14', 1, 18, 2),
-('4', 'Packaging sangat rapih dan aman, bubble wrap nya tebal dan di lapisi kardus juga, pengiriman cepat.', '2023-11-11', 2, 20, 3);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `supplier`
+-- Table structure for table `supplier`
 --
 
 CREATE TABLE `supplier` (
@@ -231,10 +215,10 @@ CREATE TABLE `supplier` (
   `alamat_supplier` varchar(255) NOT NULL,
   `supplier_id` int(11) NOT NULL,
   `telp_supplier` varchar(13) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `supplier`
+-- Dumping data for table `supplier`
 --
 
 INSERT INTO `supplier` (`nama_supplier`, `alamat_supplier`, `supplier_id`, `telp_supplier`) VALUES
@@ -244,7 +228,7 @@ INSERT INTO `supplier` (`nama_supplier`, `alamat_supplier`, `supplier_id`, `telp
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `transaksi`
+-- Table structure for table `transaksi`
 --
 
 CREATE TABLE `transaksi` (
@@ -257,10 +241,10 @@ CREATE TABLE `transaksi` (
   `transaksi_id` int(11) NOT NULL,
   `supplier_id` int(11) NOT NULL,
   `ekspedisi_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `transaksi`
+-- Dumping data for table `transaksi`
 --
 
 INSERT INTO `transaksi` (`tanggal__pembayaran`, `user_id`, `tanggal__pemesanan`, `metode__pembayaran`, `alamat`, `total_harga`, `transaksi_id`, `supplier_id`, `ekspedisi_id`) VALUES
@@ -270,7 +254,7 @@ INSERT INTO `transaksi` (`tanggal__pembayaran`, `user_id`, `tanggal__pemesanan`,
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `transaksi_detail`
+-- Table structure for table `transaksi_detail`
 --
 
 CREATE TABLE `transaksi_detail` (
@@ -279,10 +263,10 @@ CREATE TABLE `transaksi_detail` (
   `jumlah` int(11) NOT NULL,
   `produk_id` int(11) NOT NULL,
   `transaksi_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `transaksi_detail`
+-- Dumping data for table `transaksi_detail`
 --
 
 INSERT INTO `transaksi_detail` (`subtotal`, `harga_item`, `jumlah`, `produk_id`, `transaksi_id`) VALUES
@@ -292,68 +276,62 @@ INSERT INTO `transaksi_detail` (`subtotal`, `harga_item`, `jumlah`, `produk_id`,
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
-  `user_id` int(11) NOT NULL,
-  `nama_user` varchar(255) NOT NULL,
-  `alamat_user` varchar(255) NOT NULL,
-  `telp_user` varchar(13) NOT NULL,
-  `email_user` varchar(255) NOT NULL,
-  `username_user` varchar(20) NOT NULL,
-  `password_user` varchar(8) NOT NULL,
-  `foto_user` varchar(255) NOT NULL,
-  `level_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `id` int(11) NOT NULL,
+  `name` varchar(225) NOT NULL,
+  `email` varchar(225) NOT NULL,
+  `password` varchar(225) NOT NULL,
+  `user_type` varchar(225) NOT NULL DEFAULT 'user'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `user`
+-- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`user_id`, `nama_user`, `alamat_user`, `telp_user`, `email_user`, `username_user`, `password_user`, `foto_user`, `level_id`) VALUES
-(1, 'admin', 'Jalan Jawa, Jember\r\n', '081234567891', 'admin@gmail.com', 'admin', 'admin', '-', 1),
-(2, 'Novita', 'Jalan Soekarno Hatta, Surabaya', '0851234567', 'Novita1@gmai.com', 'Novita1', '12345678', '-', 3),
-(3, 'Agya', 'Jalan Imam Bonjol, Malang', '0821213456', 'agya@gmail.com', 'agya02', '123345', '-', 3);
+INSERT INTO `user` (`id`, `name`, `email`, `password`, `user_type`) VALUES
+(3, 'admin', 'admin@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 'user');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `categori`
+-- Indexes for table `categori`
 --
 ALTER TABLE `categori`
   ADD PRIMARY KEY (`categori_id`);
 
 --
--- Indeks untuk tabel `ekspedisi`
+-- Indexes for table `ekspedisi`
 --
 ALTER TABLE `ekspedisi`
   ADD PRIMARY KEY (`ekspedisi_id`);
 
 --
--- Indeks untuk tabel `keranjang`
+-- Indexes for table `keranjang`
 --
 ALTER TABLE `keranjang`
   ADD PRIMARY KEY (`keranjang_id`),
-  ADD KEY `user_id` (`user_id`),
+  ADD KEY `user_id` (`id`),
   ADD KEY `produk_id` (`produk_id`);
 
 --
--- Indeks untuk tabel `level`
+-- Indexes for table `level`
 --
 ALTER TABLE `level`
   ADD PRIMARY KEY (`level_id`);
 
 --
--- Indeks untuk tabel `merk`
+-- Indexes for table `merk`
 --
 ALTER TABLE `merk`
   ADD PRIMARY KEY (`merk_id`);
 
 --
--- Indeks untuk tabel `produk`
+-- Indexes for table `produk`
 --
 ALTER TABLE `produk`
   ADD PRIMARY KEY (`produk_id`),
@@ -362,7 +340,7 @@ ALTER TABLE `produk`
   ADD KEY `supplier_id` (`supplier_id`);
 
 --
--- Indeks untuk tabel `review`
+-- Indexes for table `review`
 --
 ALTER TABLE `review`
   ADD PRIMARY KEY (`review_id`),
@@ -370,45 +348,54 @@ ALTER TABLE `review`
   ADD KEY `user_id` (`user_id`);
 
 --
--- Indeks untuk tabel `supplier`
+-- Indexes for table `supplier`
 --
 ALTER TABLE `supplier`
   ADD PRIMARY KEY (`supplier_id`);
 
 --
--- Indeks untuk tabel `transaksi`
+-- Indexes for table `transaksi`
 --
 ALTER TABLE `transaksi`
   ADD PRIMARY KEY (`transaksi_id`),
   ADD KEY `ekspedisi_id` (`ekspedisi_id`);
 
 --
--- Indeks untuk tabel `transaksi_detail`
+-- Indexes for table `transaksi_detail`
 --
 ALTER TABLE `transaksi_detail`
   ADD KEY `produk_id` (`produk_id`),
   ADD KEY `transaksi_id` (`transaksi_id`);
 
 --
--- Indeks untuk tabel `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`user_id`),
-  ADD KEY `level_id` (`level_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `keranjang`
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `keranjang`
 --
 ALTER TABLE `keranjang`
-  ADD CONSTRAINT `keranjang_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
+  ADD CONSTRAINT `keranjang_ibfk_1` FOREIGN KEY (`id`) REFERENCES `user` (`id`),
   ADD CONSTRAINT `keranjang_ibfk_2` FOREIGN KEY (`produk_id`) REFERENCES `produk` (`produk_id`);
 
 --
--- Ketidakleluasaan untuk tabel `produk`
+-- Constraints for table `produk`
 --
 ALTER TABLE `produk`
   ADD CONSTRAINT `produk_ibfk_1` FOREIGN KEY (`categori_id`) REFERENCES `categori` (`categori_id`),
@@ -416,30 +403,24 @@ ALTER TABLE `produk`
   ADD CONSTRAINT `produk_ibfk_3` FOREIGN KEY (`supplier_id`) REFERENCES `supplier` (`supplier_id`);
 
 --
--- Ketidakleluasaan untuk tabel `review`
+-- Constraints for table `review`
 --
 ALTER TABLE `review`
   ADD CONSTRAINT `review_ibfk_1` FOREIGN KEY (`produk_id`) REFERENCES `produk` (`produk_id`),
-  ADD CONSTRAINT `review_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`);
+  ADD CONSTRAINT `review_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
 
 --
--- Ketidakleluasaan untuk tabel `transaksi`
+-- Constraints for table `transaksi`
 --
 ALTER TABLE `transaksi`
   ADD CONSTRAINT `transaksi_ibfk_1` FOREIGN KEY (`ekspedisi_id`) REFERENCES `ekspedisi` (`ekspedisi_id`);
 
 --
--- Ketidakleluasaan untuk tabel `transaksi_detail`
+-- Constraints for table `transaksi_detail`
 --
 ALTER TABLE `transaksi_detail`
   ADD CONSTRAINT `transaksi_detail_ibfk_1` FOREIGN KEY (`produk_id`) REFERENCES `produk` (`produk_id`),
   ADD CONSTRAINT `transaksi_detail_ibfk_2` FOREIGN KEY (`transaksi_id`) REFERENCES `transaksi` (`transaksi_id`);
-
---
--- Ketidakleluasaan untuk tabel `user`
---
-ALTER TABLE `user`
-  ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`level_id`) REFERENCES `level` (`level_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
