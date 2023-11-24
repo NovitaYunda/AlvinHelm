@@ -9,11 +9,11 @@
     <br>
     <h2>Tim Pengembang </h2>
     <ul>
-        <li>Novita Ayunda</li>
-        <li>Algoritma Dwifebri</li>
-        <li>agita </li>
-        <li>Sovia Lajuba</li>
-      <li>Agya</li>
+        <li>Algoritma Dwifebri Fathiyakan  (E31221361)</li>
+        <li>Gita Yasinda Putri Cahyani     (E31221264)</li>
+        <li>Agya Rizkinta Wildanti         (E31222313)</li>
+        <li>Novita Yunda Fajriyah          (E31221480)</li>
+        <li>Sovia Lajuba                   (E31222344)</li>
     </ul>
     <br>
     
