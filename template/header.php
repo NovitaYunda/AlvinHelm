@@ -25,7 +25,7 @@ $toko = query("SELECT * FROM toko")[0];
   <title><?= $title; ?></title>
   
   <!-- FAVICON -->
-  <link href="assets/img/favicon.png" rel="shortcut icon">
+  <link href="assets/img/alvin real.png" rel="shortcut icon">
   <!-- PLUGINS CSS STYLE -->
   <!-- <link href="assets/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet"> -->
   <!-- Bootstrap -->
@@ -76,7 +76,7 @@ $toko = query("SELECT * FROM toko")[0];
 			<div class="col-md-12">
 				<nav class="navbar navbar-expand-lg navbar-light navigation">
 					<a class="navbar-brand" href="index.php">
-						<img src="assets/img/logo.png" width="200px">
+						<img src="assets/img/alvin real1.png" width="100px">
 					</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
