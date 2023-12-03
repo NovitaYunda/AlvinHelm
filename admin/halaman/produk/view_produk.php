@@ -73,9 +73,9 @@
 <div class="viewmodal" style="display: none;"></div>
 
 <script>
-  // hapus data
-  function hapus(id, nama_produk) {
-    Swal.fire({
+// hapus data
+function hapus(id, nama_produk) {
+  Swal.fire({
     title: 'Hapus',
     text: `Yakin menghapus data Produk ${nama_produk} ?`,
     icon: 'warning',
@@ -83,33 +83,36 @@
     confirmButtonColor: '#3085d6',
     cancelButtonColor: '#d33',
     confirmButtonText: 'Ya, hapus!',
-    cancelButtonText: 'tidak',
+    cancelButtonText: 'Tidak',
   }).then((result) => {
     if (result.isConfirmed) {
-        $.ajax({
-          type: "post",
-          url: "halaman/produk/hapus.php",
-          data: {
-            id:id,
-            nama_produk: nama_produk
-          },
-          dataType: "json",
-          success: function (response){
-            if (response.sukses) {
-              Swal.fire({
-                icon: 'success',
-                title: 'Berhasil',
-                text: response.sukses,
-              });
-            $("#viewdata").empty();
-            $("#viewdata").html(response.data);
-            }
-          },
-            error: function(xhr, ajaxOptions, thrownError){
-              alert(xhr.status + "\n" + xhr.responseText + "\n" + thrownError);
-            }
-        });
+      $.ajax({
+        type: "post",
+        url: "halaman/produk/hapus.php",
+        data: {
+          id: id,
+          nama_produk: nama_produk
+        },
+        dataType: "json",
+        success: function (response) {
+          console.log(response); // Tambahkan ini untuk melihat respons di konsol
+          if (response.sukses) {
+            Swal.fire({
+              icon: 'success',
+              title: 'Berhasil',
+              text: response.sukses,
+            }).then(() => {
+              // Pindah ke halaman admin/index.php?halaman=produk setelah menutup alert
+              location.reload();
+            });
+          }
+        },
+        error: function(xhr, ajaxOptions, thrownError) {
+          console.error(xhr.status + "\n" + xhr.responseText + "\n" + thrownError);
+        }
+      });
     }
   });
-  }
+}
+
 </script>

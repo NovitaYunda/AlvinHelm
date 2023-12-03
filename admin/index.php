@@ -245,7 +245,7 @@ $users = query("SELECT * FROM users WHERE user_id = '$user_id'")[0];
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; toko-fandi <?= date('Y'); ?></span>
+            <span>Copyright &copy; toko alvin helm <?= date('Y'); ?></span>
           </div>
         </div>
       </footer>

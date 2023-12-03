@@ -104,7 +104,7 @@ if (isset($_POST['login'])) {
                             <div class="loggedin-forgot">
                             </div>
                             <button type="submit" class="d-block py-3 px-5 bg-primary text-white border-0 rounded font-weight-bold mt-3" name="login">Log in</button>
-                            <a class="mt-3 d-block text-primary" href="lupapassword.php">Lupa Password?</a>
+                            <!-- <a class="mt-3 d-block text-primary" href="lupapassword.php">Lupa Password?</a> -->
                         </fieldset>
                     </form>
                 </div>
