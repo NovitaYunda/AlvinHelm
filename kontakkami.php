@@ -39,13 +39,14 @@ $toko = query("SELECT * FROM toko")[0];
                         <h4>WA</h4>
                         <a href="https://wa.me/<?= $toko['telp']; ?>" class="btn btn-success" target="_blank"><i class="fa fa-whatsapp"></i> +<?= $toko['telp']; ?></a>
                       </div>
-                      <div class="col-md-6">
-                        <h4>E-mail</h4>
+                     <div class="col-md-6">
+                        <h4>Email</h4>
                         <a href="mailto:<?= $toko['email']; ?>" class="btn btn-primary"><i class="fa fa-envelope"></i> <?= $toko['email']; ?></a>
                       </div>
+
                     </div>
                   </div>
-                </div>
+                </div> 
               </div>
           <div class="row">
             <div class="col-md-12">
