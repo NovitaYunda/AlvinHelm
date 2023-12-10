@@ -18,7 +18,7 @@
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                            Jumlah Penjualan (Bulanan)</div>
+                            Jumlah Penjualan (Bulan ini)</div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jmlbeli; ?></div>
                     </div>
                     <div class="col-auto">
@@ -44,7 +44,7 @@
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                            Jumlah Penjualan (Tahunan)</div>
+                            Jumlah Penjualan (Tahun ini)</div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jmlbeli; ?></div>
                     </div>
                     <div class="col-auto">
@@ -102,7 +102,7 @@
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                            Jumlah Pembeli</div>
+                            Jumlah Customer</div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jmlpembeli; ?></div>
                     </div>
                     <div class="col-auto">
@@ -135,6 +135,12 @@
                 </div>
             </div>
         </a>
+        </div>
+        
+    </div>
+    <!-- <div class="card ">
+        <div class="card-body"> -->
+        <iframe title="powewr bi rill" width="1050" height="900" src="https://app.powerbi.com/view?r=eyJrIjoiMjBjZDA5YzEtZjU1Yi00MzM0LTlhMTEtZjIwZGU2NzNhN2YyIiwidCI6IjUyNjNjYzgxLTU5MTItNDJjNC1hYmMxLWQwZjFiNjY4YjUzMCIsImMiOjEwfQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
         </div>
     </div>
     <!-- <div class="col-xl-3 col-md-6 mb-4">
