@@ -1,5 +1,10 @@
 <h1>Alvin Helm Store</h1>
-![alt text](https://github.com/algor1tma/algor1tma/blob/main/alvin%20real1.png)
+
+
+<div align="center">
+  <img height="400" wide="899" src="https://github.com/algor1tma/algor1tma/blob/main/alvin%20real1.png"  />
+</div>
+
 <br>
 <h2>Deskripsi Aplikasi</h2>
     <p>Aplikasi "Alvi Helm" adalah aplikasi berbasis web yang menggabungkan sistem manajemen toko dengan e-commerce, menggunakan PHP native. Dengan fokus pada kemudahan penggunaan, platform ini memungkinkan pemilik toko untuk mengelola inventaris, pesanan, dan pembayaran dengan mudah sambil menyediakan pengalaman belanja online yang menarik bagi pelanggan. Dari pengelolaan stok hingga fitur checkout yang responsif, AlvinHelm memberikan solusi lengkap yang memadukan keamanan data yang kuat dengan performa yang cepat, memungkinkan pemilik toko untuk mengembangkan bisnis mereka tanpa hambatan teknis.</p>
