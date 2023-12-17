@@ -16,7 +16,7 @@ $i = 1;
                       <td>Rp. <?= number_format($data['total_pembelian']); ?></td>
                       <td>
                         <?php if($data['status_pembelian'] == 1) { ?>
-                        <nav class="badge badge-info">Sudah kirim pembayaran</nav>
+                        <nav class="badge badge-info">Pembayaran terkirim</nav>
                         <?php } elseif($data['status_pembelian'] == 2) { ?>
                           <nav class="badge badge-info">Barang dikirim</nav>
                         <?php } elseif($data['status_pembelian'] == 3) { ?>

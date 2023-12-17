@@ -56,7 +56,7 @@
                         <i class="fas fa-trash"></i>
                       </button>
                       
-                      <a href="?halaman=produk&aksi=detail&id=<?= $data['id_produk']; ?>" class="btn btn-success btn-circle"><i class="fas fa-eye"></i></a>
+                      <a href="?halaman=produk&aksi=detail&id=<?= $data['id_produk']; ?>" class="btn btn-primary btn-circle"><i class="fas fa-eye"></i></a>
 
                     </td>
                 </tr>

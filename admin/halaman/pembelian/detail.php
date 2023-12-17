@@ -39,7 +39,7 @@ $pem = mysqli_fetch_assoc($query_pem);
               <li><b>Total Pembayaran : </b>Rp. <?= number_format($resi['total_pembelian']); ?></li>
               <li><b>Status : </b>
                         <?php if($resi['status_pembelian'] == 1) { ?>
-                        <nav class="badge badge-info">Sudah kirim pembayaran</nav>
+                        <nav class="badge badge-info">Pembayaran terkirim</nav>
                         <?php } elseif($resi['status_pembelian'] == 2) { ?>
                           <nav class="badge badge-info">Barang dikirim</nav>
                         <?php } elseif($resi['status_pembelian'] == 3) { ?>

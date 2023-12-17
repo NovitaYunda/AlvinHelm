@@ -49,7 +49,7 @@ $html = $judul.'
               
               if($data['status_pembelian'] == 1) {
               
-           $html .= '   <nav class="badge badge-info">Sudah kirim pembayaran</nav>';
+           $html .= '   <nav class="badge badge-info">Pembayaran terkirim</nav>';
 
               } elseif($data['status_pembelian'] == 2) {
 

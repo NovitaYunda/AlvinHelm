@@ -3,7 +3,7 @@
   <!-- DataTales Example -->
   <div class="card shadow mb-4">
     <div class="card-header py-3">
-      <h4 class="m-0 font-weight-bold">Data Pembeli</h4>
+      <h4 class="m-0 font-weight-bold">Data Customer</h4>
     </div>
     <div class="card-header py-3" style="background-color: #fff;">
       <a href="?halaman=datapembeli&aksi=datatable" class="btn btn-success"><i class="fas fa-table"></i> Data Table</a>
@@ -49,7 +49,7 @@
                     <button type="button" class="btn btn-danger btn-circle" onclick="hapus('<?= $data['id_pembeli']; ?>','<?= $data['username_pembeli']; ?>')">
                       <i class="fas fa-trash"></i>
                     </button>
-                    <button type="button" class="btn btn-success btn-circle" onclick="detail('<?= $data['id_pembeli']; ?>')">
+                    <button type="button" class="btn btn-primary btn-circle" onclick="detail('<?= $data['id_pembeli']; ?>')">
                       <i class="fas fa-eye"></i>
                     </button>
                   </td>
@@ -110,7 +110,7 @@
   function detail(id) {
     $.ajax({
       type: 'POST',
-      url: 'http://localhost/toko-online/admin/halaman/pembeli/detail.php',
+      url: 'http://localhost/tokohelm/tokohelm/admin/halaman/pembeli/detail.php',
       data: {
         id: id
       },

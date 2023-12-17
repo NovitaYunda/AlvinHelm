@@ -9,13 +9,13 @@ if (isset($_POST['cari'])) {
   } else {
     $result = query("SELECT * FROM pembelian INNER JOIN pembeli ON pembelian.id_pembeli = pembeli.id_pembeli WHERE tgl_pembelian BETWEEN '$tgl_mulai' AND '$tgl_selesai' AND status_pembelian = '$status'");
   }
-  $judul = '<h4 class="m-0 font-weight-bold">Laporan Transaksi Pembelian dari "'.date("d F Y", strtotime($tgl_mulai)).'" hingga "'.date("d F Y", strtotime($tgl_selesai)).'"</h4>';
+  $judul = '<h4 class="m-0 font-weight-bold">Laporan Transaksi Penjualan dari "'.date("d F Y", strtotime($tgl_mulai)).'" hingga "'.date("d F Y", strtotime($tgl_selesai)).'"</h4>';
 } else {
   $tgl_mulai = "";
   $tgl_selesai = "";
   $status = "";
   $result = query("SELECT * FROM pembelian INNER JOIN pembeli ON pembelian.id_pembeli = pembeli.id_pembeli");
-  $judul = '<h4 class="m-0 font-weight-bold">Laporan Transaksi Pembelian</h4>';
+  $judul = '<h4 class="m-0 font-weight-bold">Laporan Transaksi Penjualan</h4>';
 }
 
 ?>
@@ -43,7 +43,7 @@ if (isset($_POST['cari'])) {
               <option value="">-- Pilih Status --</option>
               <option value="0" <?= ($status == 0) ? 'selected' : ''; ?>>Belum dibayar</option>
               <option value="6" <?= ($status == 6) ? 'selected' : ''; ?>>Diproses Penjual</option>
-              <option value="1" <?= ($status == 1) ? 'selected' : ''; ?>>Sudah kirim pembayaran</option>
+              <option value="1" <?= ($status == 1) ? 'selected' : ''; ?>>Pembayaran terkirim</option>
               <option value="2" <?= ($status == 2) ? 'selected' : ''; ?>>Barang dikirim</option>
               <option value="3" <?= ($status == 3) ? 'selected' : ''; ?>>Barang sudah sampai</option>
               <option value="4" <?= ($status == 4) ? 'selected' : ''; ?>>Berhasil</option>
@@ -65,7 +65,7 @@ if (isset($_POST['cari'])) {
                 <tr>
                   <th>No.</th>
                   <th>ID Transaksi</th>
-                  <th>Nama Pembeli</th>
+                  <th>Nama Customer</th>
                   <th>Tgl penjualan</th>
                   <th>Total penjualan</th>
                   <th>Status</th>
@@ -86,7 +86,7 @@ if (isset($_POST['cari'])) {
                       <td>Rp. <?= number_format($data['total_pembelian']); ?></td>
                       <td>
                         <?php if($data['status_pembelian'] == 1) { ?>
-                        <nav class="badge badge-info">Sudah kirim pembayaran</nav>
+                        <nav class="badge badge-info">Pembayaran terkirim</nav>
                         <?php } elseif($data['status_pembelian'] == 2) { ?>
                           <nav class="badge badge-info">Barang dikirim</nav>
                         <?php } elseif($data['status_pembelian'] == 3) { ?>

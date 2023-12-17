@@ -63,7 +63,7 @@ $total = 0;
                         <td>Rp. <?= number_format($data['total_pembelian']); ?></td>
                         <td>
                           <?php if($data['status_pembelian'] == 1) { ?>
-                          <nav>Sudah kirim pembayaran</nav>
+                          <nav>Pembayaran terkirim</nav>
                           <?php } elseif($data['status_pembelian'] == 2) { ?>
                             <nav>Barang dikirim</nav>
                           <?php } elseif($data['status_pembelian'] == 3) { ?>

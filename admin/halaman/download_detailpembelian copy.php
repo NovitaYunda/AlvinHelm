@@ -43,7 +43,7 @@ $html .= " <li><b>Tanggal Transaksi : </b>".date("d F Y, H:i", strtotime($resi['
           ";
           
                         if($resi['status_pembelian'] == 1) {
-                $html .= "        Sudah kirim pembayaran";
+                $html .= "        Pembayaran terkirim";
                         } elseif($resi['status_pembelian'] == 2) {
                 $html .= "          Barang dikirim";
                         } elseif($resi['status_pembelian'] == 3) {

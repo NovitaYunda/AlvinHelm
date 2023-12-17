@@ -21,7 +21,7 @@
                 <th>Aksi</th>
               </tr>
             </thead>
-            <tfoot>
+            <!-- <tfoot>
               <tr>
                 <th>No.</th>
                 <th>Foto</th>
@@ -30,7 +30,7 @@
                 <th>Jenis Kelamin</th>
                 <th>Aksi</th>
               </tr>
-            </tfoot>
+            </tfoot> -->
             <tbody id="viewdata">
             <?php 
 
@@ -49,7 +49,7 @@
                     <button type="button" class="btn btn-danger btn-circle" onclick="hapus('<?= $data['id_pembeli']; ?>','<?= $data['username_pembeli']; ?>')">
                       <i class="fas fa-trash"></i>
                     </button>
-                    <button type="button" class="btn btn-success btn-circle" onclick="detail('<?= $data['id_pembeli']; ?>')">
+                    <button type="button" class="btn btn-primary btn-circle" onclick="detail('<?= $data['id_pembeli']; ?>')">
                       <i class="fas fa-eye"></i>
                     </button>
                   </td>
@@ -110,7 +110,7 @@
   function detail(id) {
     $.ajax({
       type: 'POST',
-      url: 'http://localhost/toko-online/admin/halaman/pembeli/detail.php',
+      url: 'http://localhost/tokohelm/tokohelm/admin/halaman/pembeli/detail.php',
       data: {
         id: id
       },

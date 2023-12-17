@@ -21,7 +21,7 @@
                 <th>Aksi</th>
               </tr>
             </thead>
-            <tfoot>
+            <!-- <tfoot>
               <tr>
                 <th>No.</th>
                 <th>Foto</th>
@@ -30,7 +30,7 @@
                 <th>Jenis Kelamin</th>
                 <th>Aksi</th>
               </tr>
-            </tfoot>
+            </tfoot> -->
             <tbody id="viewdata">
             <?php 
 
@@ -54,7 +54,7 @@
                       <i class="fas fa-trash"></i>
                     </button>
 
-                    <button type="button" class="btn btn-success btn-circle" onclick="detail('<?= $data['user_id']; ?>')">
+                    <button type="button" class="btn btn-primary btn-circle" onclick="detail('<?= $data['user_id']; ?>')">
                       <i class="fas fa-eye"></i>
                     </button>
                   </td>

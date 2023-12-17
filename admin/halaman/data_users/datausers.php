@@ -22,7 +22,7 @@ foreach ($result as $data) :
       <i class="fas fa-trash"></i>
     </button>
 
-    <button type="button" class="btn btn-success btn-circle" onclick="detail('<?= $data['user_id']; ?>')">
+    <button type="button" class="btn btn-primary btn-circle" onclick="detail('<?= $data['user_id']; ?>')">
       <i class="fas fa-eye"></i>
     </button>
   </td>

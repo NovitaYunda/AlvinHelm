@@ -54,7 +54,7 @@ if (isset($_POST['login'])) {
   <title>Login Admin</title>
   
   <!-- FAVICON -->
-  <link href="../assets/img/Alvinhelmlogo.png" rel="shortcut icon">
+  <link href="../assets/img/alvin real1.png" rel="shortcut icon">
   <!-- PLUGINS CSS STYLE -->
   <!-- <link href="../assets/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet"> -->
   <!-- Bootstrap -->
@@ -74,7 +74,13 @@ if (isset($_POST['login'])) {
   <link rel="stylesheet" href="../assets/sweeetalert2/dist/sweetalert2.min.css">
   <script src="../assets/sweeetalert2/dist/sweetalert2.all.min.js"></script>
 
-
+  <style>
+    body {
+      background-image: url('../assets/img/MOTO14.png'); /* Ganti dengan path gambar yang ingin digunakan */
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -90,7 +96,7 @@ if (isset($_POST['login'])) {
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-5 col-md-8 align-item-center">
-                <div class="border">
+                <div class="border bg-white rounded">
                     <h3 class="bg-gray p-4">Login Admin</h3>
                     <form method="POST">
                       <fieldset class="p-4">
@@ -104,6 +110,7 @@ if (isset($_POST['login'])) {
                             <div class="loggedin-forgot">
                             </div>
                             <button type="submit" class="d-block py-3 px-5 bg-primary text-white border-0 rounded font-weight-bold mt-3" name="login">Log in</button>
+                            <a class="mt-3 d-block text-primary" href="../../tokohelm/pilihan.php">Kembali ke pilihan</a>
                             <!-- <a class="mt-3 d-block text-primary" href="lupapassword.php">Lupa Password?</a> -->
                         </fieldset>
                     </form>

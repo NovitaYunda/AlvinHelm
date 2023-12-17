@@ -20,13 +20,13 @@
                 <th>Aksi</th>
               </tr>
             </thead>
-            <tfoot>
+            <!-- <tfoot>
               <tr>
                 <th>No.</th>
                 <th>Kategori Produk</th>
                 <th>Aksi</th>
               </tr>
-            </tfoot>
+            </tfoot> -->
             <tbody id="viewdata">
             <?php 
 

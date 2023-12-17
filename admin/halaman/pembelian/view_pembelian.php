@@ -47,7 +47,7 @@ if (isset($_POST['cari'])) {
                 <tr>
                   <th>No.</th>
                   <th>ID Transaksi</th>
-                  <th>Nama Pembeli</th>
+                  <th>Nama Customer</th>
                   <th>Tgl Penjualan</th>
                   <th>Total Penjualan</th>
                   <th>Status</th>
@@ -80,7 +80,7 @@ if (isset($_POST['cari'])) {
                       <td>Rp. <?= number_format($data['total_pembelian']); ?></td>
                       <td>
                         <?php if($data['status_pembelian'] == 1) { ?>
-                        <nav class="badge badge-info">Sudah kirim pembayaran</nav>
+                        <nav class="badge badge-info">Pembayaran terkirim</nav>
                         <?php } elseif($data['status_pembelian'] == 2) { ?>
                           <nav class="badge badge-info">Barang dikirim</nav>
                         <?php } elseif($data['status_pembelian'] == 3) { ?>
@@ -96,11 +96,11 @@ if (isset($_POST['cari'])) {
                         <?php } ?>
                       </td>
                       <td class="text-center">
-                        <a href="?halaman=pembelian&aksi=detail&id=<?= $data['id_pembelian']; ?>" class="btn btn-success mb-2"><i class="fas fa-eye"></i> Detail</a>
+                        <a href="?halaman=pembelian&aksi=detail&id=<?= $data['id_pembelian']; ?>" class="btn btn-primary mb-2" style="height: 40px; width: 150px;" ><i class="fas fa-eye"></i> Detail</a>
 
                         <br>
                         <?php if ($data['status_pembelian'] <> 0) { ?>
-                          <button type="button" class="btn btn-primary" onclick="pembayaran('<?= $data['id_pembelian']; ?>')">
+                          <button type="button" class="btn btn-success mb-2" style="height: 40px; width: 150px;" onclick="pembayaran('<?= $data['id_pembelian']; ?>')">
                             <i class="fas fa-money-bill"></i> Pembayaran
                           </button>
                         <?php } ?>

@@ -1,5 +1,5 @@
 <!-- Sidebar -->
-<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+<ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
 
 <!-- Sidebar - Brand -->
 <a class="sidebar-brand d-flex align-items-center justify-content-center mb-2 mt-2" href="index.php">
@@ -39,6 +39,11 @@
     <span>Data Users</span></a>
 </li>
 
+<li class="nav-item <?= ($_GET['halaman'] == 'datapembeli') ? 'active' : ''; ?>">
+  <a class="nav-link" href="?halaman=datapembeli">
+    <i class="fas fa-fw fa-users"></i>
+    <span>Data Customer</span></a>
+</li>
 <!-- Nav Item - Charts -->
 <li class="nav-item <?= ($_GET['halaman'] == 'kategori') ? 'active' : ''; ?>">
   <a class="nav-link" href="?halaman=kategori">
@@ -53,16 +58,12 @@
 </li>
 
 <!-- Nav Item - Tables -->
-<li class="nav-item <?= ($_GET['halaman'] == 'datapembeli') ? 'active' : ''; ?>">
-  <a class="nav-link" href="?halaman=datapembeli">
-    <i class="fas fa-fw fa-users"></i>
-    <span>Pembeli</span></a>
-</li>
+
 
 <li class="nav-item <?= ($_GET['halaman'] == 'pembelian') ? 'active' : ''; ?>">
   <a class="nav-link" href="?halaman=pembelian">
     <i class="fas fa-fw fa-store"></i>
-    <span>Update Penjualan</span></a>
+    <span>Detail Penjualan</span></a>
 </li>
 
 <li class="nav-item <?= ($_GET['halaman'] == 'laporan') ? 'active' : ''; ?>">
