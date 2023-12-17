@@ -140,7 +140,7 @@
     </div>
     <!-- <div class="card ">
         <div class="card-body"> -->
-        <iframe title="powewr bi rill" width="1050" height="900" src="https://app.powerbi.com/view?r=eyJrIjoiNDk2ZWRiNWQtYzVmMi00MzVlLTk2M2YtNjUxZjVkNDMwMDg4IiwidCI6IjUyNjNjYzgxLTU5MTItNDJjNC1hYmMxLWQwZjFiNjY4YjUzMCIsImMiOjEwfQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
+        <iframe title="powewr bi rill" width="1050" height="900" src="https://app.powerbi.com/view?r=eyJrIjoiOWQ2M2FiNDgtNzYzNC00ZjAwLTk1MGUtMTU2YWYwM2U2MDc2IiwidCI6IjUyNjNjYzgxLTU5MTItNDJjNC1hYmMxLWQwZjFiNjY4YjUzMCIsImMiOjEwfQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
         </div>
     </div>
     <!-- <div class="col-xl-3 col-md-6 mb-4">
