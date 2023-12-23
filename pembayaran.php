@@ -88,7 +88,7 @@ if (isset($_POST['kirim'])) {
 					<h2>Konfirmasi Pembayaran</h2>
 					<p>Kirim bukti pembayaran anda disini</p>
           <div class="alert alert-success" role="alert">
-            Silahkan melakukan pembayaran <b>Rp. <?= number_format($total_pembelian); ?></b> ke Bank BRI (No.REK: <b>0021 0124 0088 035</b>)
+            Silahkan melakukan pembayaran <b>Rp. <?= number_format($total_pembelian); ?></b>  (No.REK: <b>0021 0124 0088 035</b>)
             <b></b>
           </div>
 				</div>
@@ -109,14 +109,14 @@ if (isset($_POST['kirim'])) {
 									<label class="form-label">Nama Pembeli</label>
 									<input type="text" class="form-control" value="<?= $pembeli['nama_pembeli']; ?>" readonly required>
 								</div>
-								<div class="form-group">
+								<!-- <div class="form-group">
 									<label class="form-label">Masukkan Nama Bank</label>
                   <input type="text" class="form-control" name="bank" value="<?= $bank; ?>" required>
 								</div>
                 <div class="form-group">
 									<label class="form-label">Jumlah (Rp)</label>
 									<input type="number" class="form-control" name="jumlah" value="<?= $jumlah; ?>" required>
-								</div>
+								</div> -->
 								<!-- File chooser -->
 								<div class="form-group">
                   <label class="form-label">Bukti Pembayaran</label><br>

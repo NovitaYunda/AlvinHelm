@@ -50,9 +50,9 @@
                       <i class="fas fa-tags"></i>
                     </button>
 
-                    <button type="button" class="btn btn-danger btn-circle" onclick="hapus('<?= $data['user_id']; ?>', '<?= $data['username']; ?>')">
+                    <!-- <button type="button" class="btn btn-danger btn-circle" onclick="hapus('<?= $data['user_id']; ?>', '<?= $data['username']; ?>')">
                       <i class="fas fa-trash"></i>
-                    </button>
+                    </button> -->
 
                     <button type="button" class="btn btn-primary btn-circle" onclick="detail('<?= $data['user_id']; ?>')">
                       <i class="fas fa-eye"></i>
